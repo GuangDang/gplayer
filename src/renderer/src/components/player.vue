@@ -9,7 +9,7 @@
       <img ref="cover" :src="meta.cover ? meta.cover : this.defaultCover" id="cover" >
       <div class="text">
         <h1 v-if="meta.title">{{ meta.title }}</h1>
-        <h1 v-else>{{ meta.name }}</h1> 
+        <h1 v-else>{{ fileName }}</h1> 
         <div class="artist" v-if="meta.artist">{{ meta.artist }}</div>
       </div>
       <div class="canvascontainer">
@@ -55,13 +55,11 @@ export default {
   },
   created() {
     window.api.getInfo((info) => {
-      if (info) {
         this.meta.path = info.filePath
         this.meta.title = info.title || this.meta.title
         this.meta.artist = info.artist || this.meta.artist
         this.meta.album = info.album  || this.meta.album
         this.meta.cover = info.picture || this.defaultCover
-      }
     })
   },
 
@@ -75,7 +73,7 @@ export default {
     time() {
       return this.secTotime(Math.floor(this.duration))
     },
-    name() {
+    fileName() {
       let arr = this.path.split("/")
       return arr[arr.length - 1].split(".")[0]
     }
