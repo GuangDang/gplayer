@@ -9,6 +9,7 @@ app.commandLine.appendSwitch('wm-window-animations-disabled')
 let filePath, tray
 
 filePath = process.argv[1]
+// filePath = 'D:/Guang/Music/One Last Kiss.mp3'
 
 getMetaDataAsync(filePath).then((meta) => {
   ipcMain.handle('getInfo', () => {

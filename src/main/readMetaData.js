@@ -12,6 +12,7 @@ function md(filePath) {
         } else {
           coverSrc = undefined
         }
+
         const mdata = new MetaData(tag.tags.title, tag.tags.artist, tag.tags.album, coverSrc)
         resolve(mdata)
       },
