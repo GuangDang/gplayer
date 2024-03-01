@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-app-region: drag;
+  user-select: none;
+}
+
+/* body {
+  background-image: url('./cover-18-1-768x890.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+audio {
+  margin: 10px;
+  width: 400px;
+  -webkit-app-region: no-drag;
+}
+
+i,
+.process {
+  -webkit-app-region: no-drag;
+}
+
+:root {
+  --container-bg: rgba(45, 45, 45, 0.977);
+  --text-color: rgb(255, 255, 255);
+  --icon-color: rgba(185, 185, 185, 0.726);
+  --process-bar-bg: #8b8b8b;
+  --shadow-color: rgba(156, 156, 156, 0.457);
+  --cur-bar-bg: #fff;
+}
+
+html[theme='light'] {
+  --container-bg: #e6e6e6f9;
+  --text-color: rgb(0, 0, 0);
+  --icon-color: rgba(65, 65, 65, 0.726);
+  --process-bar-bg: #a1a1a1;
+  --shadow-color: rgba(97, 97, 97, 0.568);
+  --cur-bar-bg: #000000;
+}
